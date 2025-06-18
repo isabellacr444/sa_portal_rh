@@ -8,20 +8,15 @@ import { CurriculosService } from 'src/app/services/curriculos.service';
   styleUrls: ['./curriculo-form.component.scss'],
 })
 export class CurriculoFormComponent implements OnInit {
-  //* atributos
-  public curriculo: Curriculo = new Curriculo(0, '', '', '', '',''); // rastrear os dados do formulário por interpolação {{}}
+  public curriculo: Curriculo = new Curriculo(0, '', '', '', '',''); 
   public curriculos: Curriculo[] = [];
-   // vetor para armazenar os curriculos do BD
 
-  //* construtor
-  constructor(private _curriculosService: CurriculosService) {} // aplicando o service no construtor
+  constructor(private _curriculosService: CurriculosService) {}
 
-  //* método onInit
   ngOnInit(): void {
     this.listarCurriculos();
   }
 
-  //* 4 métodos para o crud
   listarCurriculos(): void {
     this._curriculosService.getCurriculos().subscribe(
       (e) => {
@@ -33,7 +28,6 @@ export class CurriculoFormComponent implements OnInit {
     );
   }
 
-  // listar Curriculo por ID
   listarCurriculoPorId(id: any): void {
     this.curriculo = this.curriculo;
   }
