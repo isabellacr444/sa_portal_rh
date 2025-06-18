@@ -8,7 +8,7 @@ import { CurriculosService } from 'src/app/services/curriculos.service';
   styleUrls: ['./curriculo-form.component.scss'],
 })
 export class CurriculoFormComponent implements OnInit {
-  public curriculo: Curriculo = new Curriculo(0, '', '', '', '',''); 
+  public curriculo: Curriculo = new Curriculo(0, '', '', '', '', '');
   public curriculos: Curriculo[] = [];
 
   constructor(private _curriculosService: CurriculosService) {}
@@ -19,52 +19,65 @@ export class CurriculoFormComponent implements OnInit {
 
   listarCurriculos(): void {
     this._curriculosService.getCurriculos().subscribe(
-      (e) => {
-        this.curriculos = e.map((curriculo) => Curriculo.fromMap(curriculo));
+      (resposta) => {
+        this.curriculos = resposta.map((item) => Curriculo.fromMap(item));
       },
-      (error) => {
-        alert('Erro ao Listar Curriculos: ' + error);
+      (erro) => {
+        alert('Erro ao listar currículos: ' + erro);
       }
     );
   }
 
-  listarCurriculoPorId(id: any): void {
-    this.curriculo = this.curriculo;
+  listarCurriculoPorId(id: number): void {
+    const selecionado = this.curriculos.find((c) => c.id === id);
+    if (selecionado) {
+      this.curriculo = new Curriculo(
+        selecionado.id,
+        selecionado.nome,
+        selecionado.formacao,
+        selecionado.experiencia,
+        selecionado.habilidades,
+        selecionado.linkedin
+      );
+    }
   }
+
 
   cadastrarCurriculo(): void {
     this._curriculosService.postCurriculo(this.curriculo).subscribe(
       () => {
-        this.curriculo = new Curriculo(0, '', '', '', '','');
+        this.curriculo = new Curriculo(0, '', '', '', '', '');
         this.listarCurriculos();
       },
-      (error) => {
-        alert('Erro ao cadastrar curriculo: ' + error);
+      (erro) => {
+        alert('Erro ao cadastrar currículo: ' + erro);
       }
     );
   }
 
-  atualizarCurriculo(id: any): void {
+  atualizarCurriculo(id: number): void {
     this._curriculosService.putCurriculo(id, this.curriculo).subscribe(
       () => {
-        this.curriculo = new Curriculo(0, '', '', '', '','');
+        this.curriculo = new Curriculo(0, '', '', '', '', '');
         this.listarCurriculos();
       },
-      (error) => {
-        alert('Erro ao atualizar curriculo: ' + error);
+      (erro) => {
+        alert('Erro ao atualizar currículo: ' + erro);
       }
     );
   }
 
-  excluirCurriculo(id: any): void {
-    this._curriculosService.deleteCurriculo(id).subscribe(
-      () => {
-        this.curriculo = new Curriculo(0, '', '', '', '','');
-        this.listarCurriculos();
-      },
-      (error) => {
-        alert('Erro ao deletar curriculo: ' + error);
-      }
-    );
+  excluirCurriculo(id: number): void {
+    if (confirm('Tem certeza que deseja excluir este currículo?')) {
+      this._curriculosService.deleteCurriculo(id).subscribe(
+        () => {
+          this.curriculo = new Curriculo(0, '', '', '', '', '');
+          this.listarCurriculos();
+        },
+        (erro) => {
+          alert('Erro ao excluir currículo: ' + erro);
+        }
+      );
+    }
   }
 }

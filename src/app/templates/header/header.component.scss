@@ -28,6 +28,16 @@
         color: #8f3e5d;
       }
     }
+
+    .small {
+      font-size: 1.2rem;  // menor que o padrão de 2rem da navbar
+      font-weight: normal;
+      color: #b04e78;
+
+      &:hover {
+        color: #6b2c49;
+      }
+    }
   }
 
   //media Query => telas menores

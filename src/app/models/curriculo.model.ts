@@ -72,14 +72,14 @@ export class Curriculo {
     };
   }
   //Json => Obj
-  static fromMap(map: any): Curriculo {
+    static fromMap(map: any): Curriculo {
     return new Curriculo(
-      map.id,
-      map.nome,
-      map.formacao,
-      map.experiencia,
-      map.habilidades,
-      map.linkedin
+      Number(map.id),        // id sem underscore e convertido para number
+      map._nome,
+      map._formacao,
+      map._experiencia,
+      map._habilidades,
+      map._linkedin
     );
   }
 }

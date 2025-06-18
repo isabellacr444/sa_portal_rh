@@ -27,92 +27,49 @@
       "foto": "azul.png",
       "descricao": "Trabalhar com Cloud",
       "salario": 8000
-    },
-    {
-      "id": "1948",
-      "_id": 0,
-      "_nome": "",
-      "_foto": "",
-      "_descricao": "",
-      "_salario": 0
-    },
-    {
-      "id": "e6cc",
-      "_id": 0,
-      "_nome": "",
-      "_foto": "",
-      "_descricao": "",
-      "_salario": 0
-    },
-    {
-      "id": "429a",
-      "_id": 0,
-      "_nome": "",
-      "_foto": "",
-      "_descricao": "",
-      "_salario": 0
-    },
-    {
-      "id": "d3d7",
-      "_id": 0,
-      "_nome": "",
-      "_foto": "",
-      "_descricao": "",
-      "_salario": 0
     }
   ],
   "curriculos": [
     {
       "id": "1",
-      "nome": "Julia Costa",
-      "formacao": "USP Administração",
-      "experiencia": "Nenhuma",
-      "habilidades": "Todas",
-      "linkedin": "juliacosta"
+      "_nome": "Julia Costa",
+      "_formacao": "Bacharelado em Administração",
+      "_experiencia": "3 anos como Analista de Marketing",
+      "_habilidades": "Gestão de projetos, SEO, Google Analytics",
+      "_linkedin": "juliacosta"
     },
     {
       "id": "2",
-      "nome": "Julia Silva",
-      "formacao": "UNESP Administração",
-      "experiencia": "Todas",
-      "habilidades": "Todas",
-      "linkedin": "juliasilva"
+      "_nome": "Julia Silva",
+      "_formacao": "Engenharia de Software",
+      "_experiencia": "5 anos como Desenvolvedora Frontend",
+      "_habilidades": "Angular, TypeScript, HTML, CSS",
+      "_linkedin": "juliasilva"
     },
     {
-      "id": "f155",
-      "_id": 0,
-      "_nome": "",
-      "_formacao": "",
-      "_experiencia": "",
-      "_habilidades": "",
-      "_linkedin": ""
+      "id": "3",
+      "_nome": "Laura Costa",
+      "_formacao": "Design Gráfico",
+      "_experiencia": "4 anos em criação visual e branding",
+      "_habilidades": "Adobe Photoshop, Illustrator, UX/UI",
+      "_linkedin": "lauracosta"
     },
     {
-      "id": "57df",
-      "_id": 0,
-      "_nome": "",
-      "_formacao": "",
-      "_experiencia": "",
-      "_habilidades": "",
-      "_linkedin": ""
+      "_id": 4,
+      "_nome": "Laura Silva",
+      "_formacao": "Ciência da Computação",
+      "_experiencia": "2 anos como Desenvolvedora Backend",
+      "_habilidades": "Node.js, MongoDB, API REST",
+      "_linkedin": "laurasilvaa",
+      "id": "4"
     },
     {
-      "id": "f18a",
-      "_id": 0,
-      "_nome": "",
-      "_formacao": "",
-      "_experiencia": "",
-      "_habilidades": "",
-      "_linkedin": ""
-    },
-    {
-      "id": "f7cd",
-      "_id": 0,
-      "_nome": "",
-      "_formacao": "",
-      "_experiencia": "",
-      "_habilidades": "",
-      "_linkedin": ""
+      "id": "9506",
+      "_nome": "Julia Frati",
+      "_formacao": "Todas",
+      "_experiencia": "Todas",
+      "_habilidades": "Todas",
+      "_linkedin": "Todas"
     }
   ]
 }
