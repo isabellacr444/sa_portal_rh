@@ -32,44 +32,35 @@
   "curriculos": [
     {
       "id": "1",
-      "_nome": "Julia Costa",
-      "_formacao": "Bacharelado em Administração",
-      "_experiencia": "3 anos como Analista de Marketing",
-      "_habilidades": "Gestão de projetos, SEO, Google Analytics",
-      "_linkedin": "juliacosta"
+      "nome": "Julia Costa",
+      "formacao": "Bacharelado em Administração",
+      "experiencia": "3 anos como Analista de Marketing",
+      "habilidades": "Gestão de projetos, SEO, Google Analytics",
+      "linkedin": "juliacosta"
     },
     {
       "id": "2",
-      "_nome": "Julia Silva",
-      "_formacao": "Engenharia de Software",
-      "_experiencia": "5 anos como Desenvolvedora Frontend",
-      "_habilidades": "Angular, TypeScript, HTML, CSS",
-      "_linkedin": "juliasilva"
+      "nome": "Julia Silva",
+      "formacao": "Engenharia de Software",
+      "experiencia": "5 anos como Desenvolvedora Frontend",
+      "habilidades": "Angular, TypeScript, HTML, CSS",
+      "linkedin": "juliasilva"
     },
     {
       "id": "3",
-      "_nome": "Laura Costa",
-      "_formacao": "Design Gráfico",
-      "_experiencia": "4 anos em criação visual e branding",
-      "_habilidades": "Adobe Photoshop, Illustrator, UX/UI",
-      "_linkedin": "lauracosta"
+      "nome": "Laura Costa",
+      "formacao": "Design Gráfico",
+      "experiencia": "4 anos em criação visual e branding",
+      "habilidades": "Adobe Photoshop, Illustrator, UX/UI",
+      "linkedin": "lauracosta"
     },
     {
-      "_id": 4,
-      "_nome": "Laura Silva",
-      "_formacao": "Ciência da Computação",
-      "_experiencia": "2 anos como Desenvolvedora Backend",
-      "_habilidades": "Node.js, MongoDB, API REST",
-      "_linkedin": "laurasilvaa",
-      "id": "4"
-    },
-    {
-      "id": "9506",
-      "_nome": "Julia Frati",
-      "_formacao": "Todas",
-      "_experiencia": "Todas",
-      "_habilidades": "Todas",
-      "_linkedin": "Todas"
+      "id": "4",
+      "nome": "Laura Silva",
+      "formacao": "Ciência da Computação",
+      "experiencia": "2 anos como Desenvolvedora Backend",
+      "habilidades": "Node.js, MongoDB, API REST",
+      "linkedin": "laurasilvaa"
     }
   ]
 }
