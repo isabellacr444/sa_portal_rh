@@ -28,6 +28,8 @@ export class CurriculoFormComponent implements OnInit {
     );
   }
 
+  //& 18/06/2025 - 14:00
+
   listarCurriculoPorId(id: number): void {
     const selecionado = this.curriculos.find((c) => c.id === id);
     if (selecionado) {
