@@ -1,24 +1,84 @@
 <h2>Cadastrar</h2>
 
 <!-- formulário para mostrar currículo selecionado -->
-<form action="">
-  <label for="">ID</label>
-  <input type="text" name="id" [(ngModel)]="curriculo.id"> <br>
+<form #form="ngForm" (ngSubmit)="cadastrarCurriculo()" novalidate>
+  <label for="id">ID</label>
+  <input
+    type="text"
+    name="id"
+    [(ngModel)]="curriculo.id"
+    required
+    #id="ngModel"
+  />
+  <div *ngIf="id.invalid && id.touched" style="color: red;">
+    ID é obrigatório.
+  </div>
+  <br />
 
-  <label for="">Nome</label>
-  <input type="text" name="nome" [(ngModel)]="curriculo.nome"> <br>
+  <label for="nome">Nome</label>
+  <input
+    type="text"
+    name="nome"
+    [(ngModel)]="curriculo.nome"
+    required
+    #nome="ngModel"
+  />
+  <div *ngIf="nome.invalid && nome.touched" style="color: red;">
+    Nome é obrigatório.
+  </div>
+  <br />
 
-  <label for="">Formação</label>
-  <input type="text" name="formacao" [(ngModel)]="curriculo.formacao"> <br>
+  <label for="formacao">Formação</label>
+  <input
+    type="text"
+    name="formacao"
+    [(ngModel)]="curriculo.formacao"
+    required
+    #formacao="ngModel"
+  />
+  <div *ngIf="formacao.invalid && formacao.touched" style="color: red;">
+    Formação é obrigatória.
+  </div>
+  <br />
 
-  <label for="">Experiência</label>
-  <input type="text" name="experiencia" [(ngModel)]="curriculo.experiencia"> <br>
+  <label for="experiencia">Experiência</label>
+  <input
+    type="text"
+    name="experiencia"
+    [(ngModel)]="curriculo.experiencia"
+    required
+    #experiencia="ngModel"
+  />
+  <div *ngIf="experiencia.invalid && experiencia.touched" style="color: red;">
+    Experiência é obrigatória.
+  </div>
+  <br />
 
-  <label for="">Habilidades</label>
-  <input type="text" name="habilidades" [(ngModel)]="curriculo.habilidades"> <br>
+  <label for="habilidades">Habilidades</label>
+  <input
+    type="text"
+    name="habilidades"
+    [(ngModel)]="curriculo.habilidades"
+    required
+    #habilidades="ngModel"
+  />
+  <div *ngIf="habilidades.invalid && habilidades.touched" style="color: red;">
+    Habilidades são obrigatórias.
+  </div>
+  <br />
 
-  <label for="">LinkedIn</label>
-  <input type="text" name="linkedin" [(ngModel)]="curriculo.linkedin"> <br>
+  <label for="linkedin">LinkedIn</label>
+  <input
+    type="text"
+    name="linkedin"
+    [(ngModel)]="curriculo.linkedin"
+    required
+    #linkedin="ngModel"
+  />
+  <div *ngIf="linkedin.invalid && linkedin.touched" style="color: red;">
+    LinkedIn é obrigatório.
+  </div>
+  <br />
 
   <button type="button" (click)="cadastrarCurriculo()">Cadastrar currículo</button>
   <button type="button" (click)="atualizarCurriculo(curriculo.id)">Atualizar currículo</button>
