@@ -1,11 +1,12 @@
 <h2>Cadastrar</h2>
 
-<form #curriculoForm="ngForm">
+<!-- formulário para mostrar currículo selecionado -->
+<form action="">
   <label for="">ID</label>
   <input type="text" name="id" [(ngModel)]="curriculo.id"> <br>
 
   <label for="">Nome</label>
-  <input type="text" name="nome" [(ngModel)]="curriculo.nome" required> <br>
+  <input type="text" name="nome" [(ngModel)]="curriculo.nome"> <br>
 
   <label for="">Formação</label>
   <input type="text" name="formacao" [(ngModel)]="curriculo.formacao"> <br>
@@ -16,40 +17,38 @@
   <label for="">Habilidades</label>
   <input type="text" name="habilidades" [(ngModel)]="curriculo.habilidades"> <br>
 
-  <label for="">Linkedin</label>
+  <label for="">LinkedIn</label>
   <input type="text" name="linkedin" [(ngModel)]="curriculo.linkedin"> <br>
 
-  <!-- Botões com lógica condicional opcional -->
-  <button type="button" (click)="cadastrarCurriculo()" *ngIf="!curriculo.id">Cadastrar curriculo</button>
-  <button type="button" (click)="atualizarCurriculo(curriculo.id)" *ngIf="curriculo.id">Atualizar curriculo</button>
-  <button type="button" (click)="excluirCurriculo(curriculo.id)" *ngIf="curriculo.id">Excluir curriculo</button>
+  <button type="button" (click)="cadastrarCurriculo()">Cadastrar currículo</button>
+  <button type="button" (click)="atualizarCurriculo(curriculo.id)">Atualizar currículo</button>
+  <button type="button" (click)="excluirCurriculo(curriculo.id)">Excluir currículo</button>
 </form>
 
+<!-- Tabela com os currículos já cadastrados -->
 <section class="listar-curriculos">
   <table class="table">
     <thead>
       <tr>
-        <th>Código do Curriculo</th>
-        <th>Curriculo</th>
+        <th>Código</th>
+        <th>Nome</th>
         <th>Formação</th>
         <th>Experiência</th>
-        <th>Habilidades</th>
-        <th>Linkedin</th>
         <th>Ação</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="curriculo-row" *ngFor="let c of curriculos">
-        <td>{{ c.id }}</td>
-        <td>{{ c.nome }}</td>
-        <td>{{ c.formacao }}</td>
-        <td>{{ c.experiencia }}</td>
-        <td>{{ c.habilidades }}</td>
-        <td>{{ c.linkedin }}</td>
+      <tr class="curriculo-row" *ngFor="let curriculo of curriculos">
+        <td>{{curriculo.id}}</td>
+        <td>{{curriculo.nome}}</td>
+        <td>{{curriculo.formacao}}</td>
+        <td>{{curriculo.experiencia}}</td>
         <td>
-          <button class="btn-listar" type="button" (click)="listarCurriculoPorId(c.id)">Editar</button>
+          <button class="btn-listar" type="button" (click)="listarCurriculoPorId(curriculo)">Listar</button>
         </td>
       </tr>
     </tbody>
   </table>
 </section>
+
+<div class="rodape"></div>

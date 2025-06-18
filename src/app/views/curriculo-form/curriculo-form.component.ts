@@ -28,20 +28,15 @@ export class CurriculoFormComponent implements OnInit {
     );
   }
 
-  //& 18/06/2025 - 14:00
-
-  listarCurriculoPorId(id: number): void {
-    const selecionado = this.curriculos.find((c) => c.id === id);
-    if (selecionado) {
-      this.curriculo = new Curriculo(
-        selecionado.id,
-        selecionado.nome,
-        selecionado.formacao,
-        selecionado.experiencia,
-        selecionado.habilidades,
-        selecionado.linkedin
-      );
-    }
+  listarCurriculoPorId(curriculo: Curriculo): void {
+    this.curriculo = new Curriculo(
+      curriculo.id,
+      curriculo.nome,
+      curriculo.formacao,
+      curriculo.experiencia,
+      curriculo.habilidades,
+      curriculo.linkedin
+    );
   }
 
 
@@ -69,7 +64,7 @@ export class CurriculoFormComponent implements OnInit {
     );
   }
 
-  excluirCurriculo(id: number): void {
+  excluirCurriculo(id: any): void {
     if (confirm('Tem certeza que deseja excluir este currículo?')) {
       this._curriculosService.deleteCurriculo(id).subscribe(
         () => {
