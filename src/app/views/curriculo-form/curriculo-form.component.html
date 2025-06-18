@@ -1,64 +1,59 @@
-<div class="curriculo-form">
-  <h2>{{ isEditMode ? 'Editar Currículo' : 'Cadastrar Currículo' }}</h2>
+<h2>Cadastrar</h2>
 
-  <form (ngSubmit)="salvar()" #form="ngForm">
-    <div>
-      <label for="nome">Nome:</label>
-      <input
-        type="text"
-        id="nome"
-        name="nome"
-        [(ngModel)]="curriculo.nome"
-        required
-      />
-    </div>
+<!-- formulário para mostrar vága selecionada -->
+<form action="">
+  <label for="">ID</label>
+  <input type="text" [(ngModel)]="curriculo.id"> <br>
 
-    <div>
-      <label for="formacao">Formação:</label>
-      <input
-        type="text"
-        id="formacao"
-        name="formacao"
-        [(ngModel)]="curriculo.formacao"
-        required
-      />
-    </div>
+  <label for="">Nome</label>
+  <input type="text" [(ngModel)]="curriculo.nome"> <br>
 
-    <div>
-      <label for="experiencia">Experiência:</label>
-      <textarea
-        id="experiencia"
-        name="experiencia"
-        [(ngModel)]="curriculo.experiencia"
-        rows="4"
-        required
-      ></textarea>
-    </div>
+  <label for="">Formação</label>
+  <input type="text" [(ngModel)]="curriculo.formacao"> <br>
 
-    <div>
-      <label for="habilidades">Habilidades:</label>
-      <textarea
-        id="habilidades"
-        name="habilidades"
-        [(ngModel)]="curriculo.habilidades"
-        rows="3"
-        required
-      ></textarea>
-    </div>
+  <label for="">Experiência</label>
+  <input type="text" [(ngModel)]="curriculo.experiencia"> <br>
 
-    <div>
-      <label for="linkedin">LinkedIn:</label>
-      <input
-        type="url"
-        id="linkedin"
-        name="linkedin"
-        [(ngModel)]="curriculo.linkedin"
-        placeholder="https://linkedin.com/in/usuario"
-      />
-    </div>
+  <label for="">Habilidades</label>
+  <input type="text" [(ngModel)]="curriculo.habilidades"> <br>
 
-    <button type="submit" [disabled]="form.invalid">
-      {{ isEditMode ? 'Atualizar' : 'Salvar' }}
-    </button>
-  </form>
-</div>
+  <label for="">Linkedin</label>
+  <input type="text" [(ngModel)]="curriculo.linkedin"> <br>
+
+  <button type="button" (click)="cadastrarCurriculo()">Cadastrar curriculo</button>
+  <button type="button" (click)="atualizarCurriculo(curriculo.id)">Atualizar curriculo</button>
+  <button type="button" (click)="excluirCurriculo(curriculo.id)">Excluir curriculo</button>
+
+</form>
+
+<!-- Tabela com as vagas já cadastradas -->
+<section class="listar-curriculos">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código do Curriculo</th>
+        <th>Curriculo</th>
+        <th>Formação</th>
+        <th>Experiência</th>
+        <th>Habilidades</th>
+        <th>Linkedin</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="curriculo-row" *ngFor="let curriculo of curriculos">
+        <td>{{curriculo.id}}</td>
+        <td>{{curriculo.nome}}</td>
+        <td>{{curriculo.formacao}}</td>
+        <td>{{curriculo.experiencia}}</td>
+        <td>{{curriculo.habilidades}}</td>
+        <td>{{curriculo.linkedin}}</td>
+        <td>
+          <button class="btn-listar" type="button" (click)="listarCurriculoPorId(curriculo)">Listar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="rodape"></div>

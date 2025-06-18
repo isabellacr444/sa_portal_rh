@@ -14,10 +14,10 @@ export class CurriculosService {
   //& criar os métodos para a conexão com a apiREST
 
   //*   get - obter a lista de curriculos
-  getCurriculoById(id: number): Observable<Curriculo> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<Curriculo>(url);
-  }
+  getCurriculos(): Observable<Curriculo[]> {
+      // observable -> rxjs => tradutor de json para typescript
+      return this.http.get<Curriculo[]>(this.apiUrl); //conecta com a API para pegar os Dados
+    }
 
   //*   post
   postCurriculo(curriculo: Curriculo): Observable<Curriculo[]> {
@@ -35,5 +35,10 @@ export class CurriculosService {
   deleteCurriculo(id: any): Observable<Curriculo[]> {
     const url = this.apiUrl + '/' + id;
     return this.http.delete<Curriculo[]>(url);
+  }
+
+  getCurriculoById(id: number): Observable<Curriculo> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Curriculo>(url);
   }
 }

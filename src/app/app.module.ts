@@ -14,7 +14,7 @@ import { PainelVagasComponent } from './views/painel-vagas/painel-vagas.componen
 import { FormsModule } from '@angular/forms';
 import { CurriculoFormComponent } from './views/curriculo-form/curriculo-form.component';
 import { CurriculoListComponent } from './views/curriculo-list/curriculo-list.component';
-import { CurriculoDetailComponent } from './views/curriculo-detail/curriculo-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -26,8 +26,7 @@ import { CurriculoDetailComponent } from './views/curriculo-detail/curriculo-det
     HomeComponent,
     PainelVagasComponent,
     CurriculoFormComponent,
-    CurriculoListComponent,
-    CurriculoDetailComponent
+    CurriculoListComponent
   ],
   imports: [
     BrowserModule,

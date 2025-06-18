@@ -6,7 +6,6 @@ import { CurriculosComponent } from './views/curriculos/curriculos.component';
 
 import { CurriculoFormComponent } from './views/curriculo-form/curriculo-form.component';
 import { CurriculoListComponent } from './views/curriculo-list/curriculo-list.component';
-import { CurriculoDetailComponent } from './views/curriculo-detail/curriculo-detail.component';
 
 import { PainelVagasComponent } from './views/painel-vagas/painel-vagas.component';
 
@@ -18,7 +17,6 @@ const routes: Routes = [
 
   {path:"curriculo-form", component: CurriculoFormComponent},
   {path:"curriculo-list", component: CurriculoListComponent},
-  {path:"curriculo-detail", component: CurriculoDetailComponent},
 
   {path:"painel-vagas", component: PainelVagasComponent}
 ];
