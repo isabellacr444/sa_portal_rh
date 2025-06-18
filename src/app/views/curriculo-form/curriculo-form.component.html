@@ -1,1 +1,64 @@
-<p>curriculo-form works!</p>
+<div class="curriculo-form">
+  <h2>{{ isEditMode ? 'Editar Currículo' : 'Cadastrar Currículo' }}</h2>
+
+  <form (ngSubmit)="salvar()" #form="ngForm">
+    <div>
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        [(ngModel)]="curriculo.nome"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="formacao">Formação:</label>
+      <input
+        type="text"
+        id="formacao"
+        name="formacao"
+        [(ngModel)]="curriculo.formacao"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="experiencia">Experiência:</label>
+      <textarea
+        id="experiencia"
+        name="experiencia"
+        [(ngModel)]="curriculo.experiencia"
+        rows="4"
+        required
+      ></textarea>
+    </div>
+
+    <div>
+      <label for="habilidades">Habilidades:</label>
+      <textarea
+        id="habilidades"
+        name="habilidades"
+        [(ngModel)]="curriculo.habilidades"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+
+    <div>
+      <label for="linkedin">LinkedIn:</label>
+      <input
+        type="url"
+        id="linkedin"
+        name="linkedin"
+        [(ngModel)]="curriculo.linkedin"
+        placeholder="https://linkedin.com/in/usuario"
+      />
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">
+      {{ isEditMode ? 'Atualizar' : 'Salvar' }}
+    </button>
+  </form>
+</div>

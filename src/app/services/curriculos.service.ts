@@ -14,9 +14,9 @@ export class CurriculosService {
   //& criar os métodos para a conexão com a apiREST
 
   //*   get - obter a lista de curriculos
-  getCurriculos(): Observable<Curriculo[]> {
-    // observable -> rxjs => tradutor de json para typescript
-    return this.http.get<Curriculo[]>(this.apiUrl); //conecta com a API para pegar os Dados
+  getCurriculoById(id: number): Observable<Curriculo> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Curriculo>(url);
   }
 
   //*   post
