@@ -19,7 +19,6 @@ Este projeto é um portal de RH desenvolvido em Angular, com funcionalidades par
 - TypeScript
 - SCSS
 - json-server (simulação de backend)
-- Jasmine/Karma (testes unitários)
 
 ## Estrutura do projeto
 - `AppModule`: módulo principal, registra todos os componentes essenciais.
