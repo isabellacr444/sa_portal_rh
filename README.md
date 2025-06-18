@@ -12,7 +12,6 @@ Este projeto é um portal de RH desenvolvido em Angular, com funcionalidades par
 - Consumo de dados via serviços Angular (`CurriculosService`, `VagasService`).
 - Estrutura modular com componentes reutilizáveis.
 - Estilização personalizada utilizando SCSS.
-- Testes unitários básicos para garantir qualidade do código.
 
 ## Tecnologias utilizadas
 - Angular
@@ -32,7 +31,6 @@ Este projeto é um portal de RH desenvolvido em Angular, com funcionalidades par
   - `CurriculosComponent`
   - `CurriculoFormComponent`
   - `CurriculoListComponent`
-  - `CurriculoDetailComponent`
 
 ## Modelos
 - `Vaga`: com atributos privados, getters, setters, métodos de conversão `toMap` e `fromMap`.
